@@ -5,5 +5,11 @@ set(CMAKE_CXX_STANDARD 14)
 
 add_subdirectory(zmq)
 
-add_executable(router-req src/router-req.cpp)
-target_link_libraries(router-req cppzmq)
+add_executable(broker src/broker.cpp)
+target_link_libraries(broker cppzmq)
+
+add_executable(worker src/worker.cpp)
+target_link_libraries(worker cppzmq)
+
+add_executable(client src/client.cpp)
+target_link_libraries(client cppzmq)
